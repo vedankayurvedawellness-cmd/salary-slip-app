@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salary Slip App</title>
     <link rel="manifest" href="/manifest.json" />
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log("App Service Worker Active!"))
+      .catch((err) => console.log("Worker Failed:", err));
+  }
+</script>
   </head>
   <body>
     <div id="root"></div>
