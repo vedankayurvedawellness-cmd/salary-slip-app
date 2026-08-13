@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salary Slip App</title>
-    <link rel="manifest" href="/manifest.webmanifest" />
-
-    <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(() => console.log("App Service Worker Active!"))
-      .catch((err) => console.log("Worker Failed:", err));
-  }
-</script>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salary Slip App</title>
+  
+  <!-- Points directly to your public files -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</head>
   <body>
     <div id="root"></div>
     <!-- This points directly to your salary slip software code -->
